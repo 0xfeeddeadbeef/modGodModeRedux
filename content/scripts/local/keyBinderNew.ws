@@ -51,7 +51,7 @@ class KeyBinderNew extends CPlayer
 	{
 		if (inv)
 		{
-			inv.AddAnItem('Crowns', 2000, true, true, false);
+			inv.AddAnItem('Crowns', 500, true, true, false);
 			//inv.AddAnItem('White Gull 1', 1, true, false, false);
 			//inv.AddAnItem('Clearing Potion', 1, true, false, false);
 			//inv.AddAnItem('Doppler mutagen', 1, true, false, false);
@@ -75,7 +75,7 @@ class KeyBinderNew extends CPlayer
 		{
 			inv = GetWitcherPlayer().inv;
 			godModeEnrichInventory(inv);
-			theGame.GetGuiManager().ShowNotification("Earned 2000 crowns");
+			theGame.GetGuiManager().ShowNotification("Enriched");
 		}
 	}
 
@@ -88,7 +88,7 @@ class KeyBinderNew extends CPlayer
 			inv = GetWitcherPlayer().inv;
 			//GetWitcherPlayer().AddRepairObjectBuff(true, true);
 			godModeRepairAllItems(inv);
-			theGame.GetGuiManager().ShowNotification("All items repaired");
+			theGame.GetGuiManager().ShowNotification("Repaired");
 		}
 	}
 
@@ -97,7 +97,7 @@ class KeyBinderNew extends CPlayer
 		if (IsPressed(action))
 		{
 			GetWitcherPlayer().AddRepairObjectBuff(true, true);
-			theGame.GetGuiManager().ShowNotification("Armor and weapons enhanced");
+			theGame.GetGuiManager().ShowNotification("Enhanced");
 		}
 	}
 
@@ -114,10 +114,11 @@ class KeyBinderNew extends CPlayer
 
 			player.GainStat(BCS_Stamina, player.GetStatMax(BCS_Stamina));
 			player.GainStat(BCS_Vitality, player.GetStatMax(BCS_Vitality));
+
 			player.ForceSetStat(BCS_Toxicity, 0);
 			player.ForceSetStat(BCS_Focus, 3);
 
-			theGame.GetGuiManager().ShowNotification("Fully healed and focused");
+			theGame.GetGuiManager().ShowNotification("Rejuvenated");
 		}
 	}
 }
